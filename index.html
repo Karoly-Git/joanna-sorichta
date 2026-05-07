@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Joanna Sorichta | Baker Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f8f6f2;
+      color: #2b2b2b;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: #8a5b2b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+      height: 420px;
+      background: url("cover.png") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    .profile-section {
+      max-width: 1100px;
+      margin: -90px auto 60px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .profile-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    .profile-image {
+      height: 100%;
+      overflow: hidden;
+      background: #f4ede4;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 52%;
+      object-fit: cover;
+    }
+
+    .desktop-profile {
+      display: block;
+    }
+
+    .mobile-profile {
+      display: none;
+    }
+
+    .profile-side-content {
+      padding: 28px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-side-content h3 {
+      font-size: 1.35rem;
+      color: #3c2a1e;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .profile-side-content p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #4d4d4d;
+    }
+
+    .side-divider {
+      width: 60px;
+      height: 3px;
+      background: #8a5b2b;
+      margin: 20px 0;
+    }
+
+    .side-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .side-skills span {
+      background: #e8d8c2;
+      color: #5a3c20;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .profile-content {
+      padding: 40px;
+    }
+
+    .profile-content h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #3c2a1e;
+      font-weight: 600;
+    }
+
+    .job-title {
+      color: #8a5b2b;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    .contact-info p {
+      margin-bottom: 8px;
+    }
+
+    .section {
+      margin-bottom: 35px;
+    }
+
+    .section h3 {
+      margin-bottom: 15px;
+      color: #3c2a1e;
+      border-bottom: 2px solid #d8c3a5;
+      padding-bottom: 8px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #f0e3d1;
+      color: #5a3c20;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .experience-item {
+      margin-bottom: 25px;
+    }
+
+    .experience-item h4 {
+      color: #2d2d2d;
+      margin-bottom: 5px;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .experience-item span {
+      display: block;
+      color: #777;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .experience-item ul {
+      padding-left: 20px;
+    }
+
+    .experience-item li {
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      background: #2f241c;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
+    p,
+    li,
+    span {
+      font-weight: 400;
+    }
+
+    @media (max-width: 900px) {
+      .profile-card {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-image {
+        height: auto;
+      }
+
+      .profile-image img {
+        width: 100%;
+        height: 750px;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .desktop-profile {
+        display: none;
+      }
+
+      .mobile-profile {
+        display: block;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        height: 320px;
+      }
+
+      .hero-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      .profile-content {
+        padding: 25px;
+      }
+
+      .profile-image img {
+        height: 500px;
+      }
+
+      .profile-side-content {
+        padding: 22px;
+      }
+
+      .skills {
+        gap: 8px;
+      }
+
+      .skill {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+      }
+
+      .side-skills span {
+        font-size: 0.78rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Joanna Sorichta</h1>
+      <p>Professional Baker • Food Production Specialist</p>
+    </div>
+  </header>
+
+  <main class="profile-section">
+
+    <div class="profile-card">
+
+      <div class="profile-image">
+
+        <img src="profile.png" alt="Joanna Sorichta" class="desktop-profile">
+
+        <img src="profile-2.png" alt="Joanna Sorichta" class="mobile-profile">
+
+        <div class="profile-side-content">
+
+          <h3>Professional Baker</h3>
+
+          <p>
+            “I take pride in creating high-quality baked goods with consistency,
+            attention to detail, and a strong work ethic developed through years
+            of experience in fast-paced bakery and production environments.”
+          </p>
+
+          <div class="side-divider"></div>
+
+          <div class="side-skills">
+            <span>Food Production</span>
+            <span>Pastry Preparation</span>
+            <span>Kitchen Organisation</span>
+            <span>Food Safety</span>
+            <span>Team Collaboration</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="profile-content">
+
+        <h2>About Me</h2>
+
+        <p class="job-title">
+          Passionate Baker with Fast-Paced Production Experience
+        </p>
+
+        <div class="contact-info">
+          <p><strong>Location:</strong> London, SW18, United Kingdom</p>
+
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:joanna.mymob@gmail.com">
+              joanna.mymob@gmail.com
+            </a>
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Professional Profile</h3>
+
+          <p>
+            Passionate and reliable baker with hands-on experience producing
+            high-quality baked goods in fast-paced food production environments.
+            Skilled in bakery operations, food preparation, kitchen organisation,
+            and maintaining high standards of hygiene and food safety.
+          </p>
+
+          <br>
+
+          <p>
+            A strong team player with excellent attention to detail and the
+            ability to work efficiently under pressure. Experienced in supporting
+            daily operations, stock control, and maintaining consistent product quality.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Key Skills</h3>
+
+          <div class="skills">
+            <div class="skill">Baking & Pastry Preparation</div>
+            <div class="skill">Food Production</div>
+            <div class="skill">Kitchen Organisation</div>
+            <div class="skill">Food Safety</div>
+            <div class="skill">Quality Control</div>
+            <div class="skill">Stock Control</div>
+            <div class="skill">Team Collaboration</div>
+            <div class="skill">Time Management</div>
+            <div class="skill">Sanitation Procedures</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Work Experience</h3>
+
+          <div class="experience-item">
+            <h4>Baker — Gail’s Bakery</h4>
+            <span>Earlsfield, London | Oct 2023 – Present</span>
+
+            <ul>
+              <li>Produce high-quality baked goods and pastries.</li>
+              <li>Maintain consistency and presentation standards.</li>
+              <li>Support efficient daily bakery operations.</li>
+              <li>Follow strict food hygiene and safety procedures.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>Grab Crane Driver / Multi-Skilled Operative</h4>
+            <span>Cory - ALS Managed Services Ltd | Feb 2017 – Oct 2023</span>
+
+            <ul>
+              <li>Operated heavy machinery in industrial environments.</li>
+              <li>Maintained safety and operational standards.</li>
+              <li>Supported plant and waste transfer operations.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <h4>Catering Assistant & Cook</h4>
+            <span>Cactus Poland — Chorzów, Poland | May 1999 – Aug 2008</span>
+
+            <ul>
+              <li>Prepared salads, soups, main meals, and baked products.</li>
+              <li>Supported daily kitchen operations in a fast-paced environment.</li>
+              <li>Maintained cleanliness, hygiene, and food safety standards.</li>
+              <li>Developed practical experience in catering and hospitality service.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="section">
+          <h3>Education</h3>
+
+          <p>
+            <strong>South Thames College</strong><br>
+            English Language Course<br>
+            London, United Kingdom
+          </p>
+
+          <br>
+
+          <p>
+            <strong>Complex of Gastronomy and Service Schools</strong><br>
+            Vocational Diploma in Catering & Food Service<br>
+            Chorzów, Poland
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Additional Information</h3>
+
+          <ul>
+            <li>Full right to work in the UK under the EU Settled Status Scheme</li>
+            <li>Experienced in fast-paced hospitality and production environments</li>
+            <li>Strong understanding of workplace hygiene and food safety standards</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>Joanna Sorichta</strong></p>
+    <p>Professional Baker & Food Production Specialist</p>
+    <p>London, United Kingdom</p>
+  </footer>
+
+</body>
+
+</html>
