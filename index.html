@@ -186,6 +186,48 @@
       margin-bottom: 8px;
     }
 
+    .action-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: 0.25s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .btn-linkedin {
+      background: #0077b5;
+      color: white;
+    }
+
+    .btn-linkedin:hover {
+      background: #005f91;
+    }
+
+    .btn-cv {
+      background: #8a5b2b;
+      color: white;
+    }
+
+    .btn-cv:hover {
+      background: #6d451f;
+    }
+
     .section {
       margin-bottom: 35px;
     }
@@ -324,6 +366,14 @@
       .side-skills span {
         font-size: 0.78rem;
       }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -388,6 +438,19 @@
               joanna.mymob@gmail.com
             </a>
           </p>
+
+          <div class="action-buttons">
+
+            <a href="https://www.linkedin.com/in/joanna-sorichta/" target="_blank" class="btn btn-linkedin">
+              LinkedIn Profile
+            </a>
+
+            <a href="Joanna_Sorichta_CV.docx" download class="btn btn-cv">
+              Download CV
+            </a>
+
+          </div>
+
         </div>
 
         <div class="section">
