@@ -59,8 +59,6 @@ function Hero() {
                 </div>
 
                 <h1>
-                    Quality food.
-                    <br />
                     <span>Reliable hands.</span>
                     <br />
                     Professional standards.
@@ -179,7 +177,12 @@ function About() {
                 <div className="stat-grid">
                     <div className="stat">
                         <strong>15+ Years</strong>
-                        <span>Catering & food production</span>
+                        <span>Catering & Food production</span>
+                    </div>
+
+                    <div className="stat">
+                        <strong>Level 3</strong>
+                        <span>Eversley Food Hygiene and Safety</span>
                     </div>
 
                     <div className="stat">
@@ -368,10 +371,30 @@ function Qualifications() {
                         Food Safety
                     </div>
 
-                    <h3>Highfield Level 2 Food Safety</h3>
+                    <h3>Food Hygiene and Safety - Level 3</h3>
 
                     <div className="meta">
-                        Highfield Online Training · Completed August 2026
+                        Eversley Training · Completed August 2026
+                    </div>
+
+                    <p>
+                        Level 3 food hygiene and safety training covering food safety management,
+                        hazard identification and control, contamination prevention, personal
+                        hygiene, cleaning and disinfection, food safety legislation and supervisory
+                        responsibilities within a food environment.
+                    </p>
+                </article>
+
+                <article className="qual-card">
+                    <div className="badge">
+                        <Award />
+                        Food Safety
+                    </div>
+
+                    <h3>Food Safety - Level 2</h3>
+
+                    <div className="meta">
+                        Highfield Training · Completed August 2026
                     </div>
 
                     <p>
@@ -501,7 +524,7 @@ function Contact() {
 
                             <div>
                                 <strong>Phone</strong>
-                                <span>07930 817 158</span>
+                                <span>07930817158</span>
                             </div>
                         </div>
 
