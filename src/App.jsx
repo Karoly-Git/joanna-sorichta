@@ -206,7 +206,7 @@ function Experience() {
             <div className="section-head">
                 <div>
                     <div className="section-kicker">Career</div>
-                    <h2 className="section-title">Relevant Experience</h2>
+                    <h2 className="section-title">Experience</h2>
                 </div>
 
                 <p>
