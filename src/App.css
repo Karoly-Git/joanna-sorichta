@@ -690,6 +690,7 @@ footer {
     .hero-visual {
         order: -1;
         min-height: 420px;
+        max-width: 450px;
     }
 
     .hero-image-wrap {
